@@ -5,7 +5,7 @@ Library for making any window borderless fullscreen.
 Responsible for:
 
 - Finding target window by title
-- Remove title bar and border
+- Removing title bar and border
 
 Important notes:
 

@@ -1,19 +1,21 @@
 {
-  "name": "function_arguments",
-  "version": "0.0.0",
-  "description": "Node.js Addons Example #2",
-  "main": "addon.js",
+  "name": "toggle-fullscreen",
+  "version": "1.0.0",
+  "description": "Toggle fullscreen",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "private": true,
-  "dependencies": {
-    "@types/bindings": "^1.3.0",
+  "devDependencies": {
+    "@types/node": "12.x.x",
+    "@types/throttle-debounce": "2.x.x",
+    "prebuildify": "3.x.x",
+    "ts-node": "8.x.x",
+    "typescript": "3.x.x",
     "bindings": "~1.2.1",
-    "node-addon-api": "^1.7.2",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "node-addon-api": "^1.7.2"
   },
   "scripts": {
-    "test": "node addon.js",
-    "install": "node-gyp-build",
+    "install": "node-gyp build",
     "build-ts": "tsc",
     "demo": "node-gyp build && yarn build-ts"
   },
@@ -25,7 +27,8 @@
     "src/lib"
   ],
   "gypfile": true,
-  "devDependencies": {
-    "node-gyp-build": "^4.2.3"
+  "dependencies": {
+    "node-gyp-build": "^4.2.3",
+    "throttle-debounce": "2.x.x"
   }
 }
