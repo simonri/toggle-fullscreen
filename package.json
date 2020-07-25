@@ -1,0 +1,31 @@
+{
+  "name": "function_arguments",
+  "version": "0.0.0",
+  "description": "Node.js Addons Example #2",
+  "main": "addon.js",
+  "private": true,
+  "dependencies": {
+    "@types/bindings": "^1.3.0",
+    "bindings": "~1.2.1",
+    "node-addon-api": "^1.7.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "test": "node addon.js",
+    "install": "node-gyp-build",
+    "build-ts": "tsc",
+    "demo": "node-gyp build && yarn build-ts"
+  },
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/index.js.map",
+    "binding.gyp",
+    "src/lib"
+  ],
+  "gypfile": true,
+  "devDependencies": {
+    "node-gyp-build": "^4.2.3"
+  }
+}
