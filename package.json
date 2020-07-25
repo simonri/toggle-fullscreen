@@ -8,11 +8,7 @@
   "devDependencies": {
     "@types/node": "12.x.x",
     "@types/throttle-debounce": "2.x.x",
-    "prebuildify": "3.x.x",
-    "ts-node": "8.x.x",
-    "typescript": "3.x.x",
-    "bindings": "~1.2.1",
-    "node-addon-api": "^1.7.2"
+    "prebuildify": "3.x.x"
   },
   "scripts": {
     "install": "node-gyp configure && node-gyp build",
@@ -28,6 +24,10 @@
   ],
   "gypfile": true,
   "dependencies": {
+    "ts-node": "8.x.x",
+    "typescript": "3.x.x",
+    "bindings": "~1.2.1",
+    "node-addon-api": "^1.7.2",
     "node-gyp-build": "^4.2.3",
     "throttle-debounce": "2.x.x"
   }
