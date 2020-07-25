@@ -1,35 +1,48 @@
 {
   "name": "toggle-fullscreen",
-  "version": "2.0.0",
-  "description": "Toggle fullscreen",
+  "version": "2.0.1",
+  "author": {
+    "name": "Simon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonri/toggle-fullscreen.git"
+  },
+  "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "private": true,
-  "devDependencies": {
-    "@types/node": "12.x.x",
-    "@types/throttle-debounce": "2.x.x",
-    "prebuildify": "3.x.x"
-  },
   "scripts": {
     "install": "node-gyp-build",
     "prebuild": "prebuildify --napi",
     "build-ts": "tsc",
-    "demo": "node-gyp build && yarn build-ts"
+    "demo:electron": "node-gyp build && yarn build-ts && electron dist/demo/demo.js"
   },
   "files": [
     "dist/index.d.ts",
     "dist/index.js",
     "dist/index.js.map",
     "binding.gyp",
-    "src/lib"
+    "src/lib",
+    "prebuilds"
   ],
-  "gypfile": true,
-  "dependencies": {
+  "devDependencies": {
+    "@types/node": "12.x.x",
+    "@types/throttle-debounce": "2.x.x",
+    "prebuildify": "3.x.x",
     "ts-node": "8.x.x",
-    "typescript": "3.x.x",
-    "bindings": "~1.2.1",
-    "node-addon-api": "^1.7.2",
-    "node-gyp-build": "^4.2.3",
+    "typescript": "3.x.x"
+  },
+  "dependencies": {
+    "electron": "^9.1.1",
+    "node-addon-api": "^3.0.0",
+    "node-gyp-build": "4.x.x",
     "throttle-debounce": "2.x.x"
+  },
+  "gypfile": true,
+  "engines": {
+    "node": ">= 10"
+  },
+  "peerDependencies": {
+    "electron": "8.x.x"
   }
 }
