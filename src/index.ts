@@ -5,6 +5,8 @@ interface AddonExports {
   toggleFullscreen(title: string): void;
 }
 
+declare interface ToggleFullscreen {}
+
 class ToggleFullscreen {
   toggleFullscreen(title: string) {
     lib.toggleFullscreen(title);
