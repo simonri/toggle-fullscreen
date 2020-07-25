@@ -1,5 +1,5 @@
-import addon from "bindings";
-const lib: AddonExports = addon("addon.node");
+import { join } from "path";
+const lib: AddonExports = require("node-gyp-build")(join(__dirname, ".."));
 
 interface AddonExports {
   toggleFullscreen(title: string): void;
